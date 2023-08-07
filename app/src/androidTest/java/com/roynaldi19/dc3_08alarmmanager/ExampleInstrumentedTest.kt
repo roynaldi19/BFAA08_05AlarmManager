@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa08_05alarmmanager
+package com.roynaldi19.dc3_08alarmmanager
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

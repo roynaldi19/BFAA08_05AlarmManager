@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BFAA08_05AlarmManager</string>
+    <string name="app_name">DC3_08AlarmManager</string>
     <string name="one_time_alarm">One Time Alarm</string>
     <string name="alarm_date">Tanggal Alarm</string>
     <string name="set_one_time_alarm">Set One Time Alarm</string>

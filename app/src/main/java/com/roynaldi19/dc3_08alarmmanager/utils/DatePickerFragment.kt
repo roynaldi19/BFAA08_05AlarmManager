@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa08_05alarmmanager
+package com.roynaldi19.dc3_08alarmmanager.utils
 
 import android.app.DatePickerDialog
 import android.app.Dialog
@@ -6,12 +6,10 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.DatePicker
 import androidx.fragment.app.DialogFragment
-import java.util.*
+import java.util.Calendar
 
-class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
-
+class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
     private var listener: DialogDateListener? = null
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         listener = context as DialogDateListener?
@@ -29,12 +27,11 @@ class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
         val date = calendar.get(Calendar.DATE)
-
-        return super.onCreateDialog(savedInstanceState)
+        return DatePickerDialog(activity as Context, this, year, month, date)
     }
 
-    override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
-
+    override fun onDateSet(view: DatePicker, year: Int, month: Int, dayOfMonth: Int) {
+        listener?.onDialogDateSet(tag, year, month, dayOfMonth)
     }
 
     interface DialogDateListener {

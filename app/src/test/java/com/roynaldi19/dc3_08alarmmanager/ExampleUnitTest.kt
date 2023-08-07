@@ -1,4 +1,4 @@
-package com.roynaldi19.bfaa08_05alarmmanager
+package com.roynaldi19.dc3_08alarmmanager
 
 import org.junit.Test
 

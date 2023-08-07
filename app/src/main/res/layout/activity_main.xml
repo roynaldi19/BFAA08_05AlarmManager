@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -22,12 +23,12 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             android:id="@+id/btn_once_date"
-            style="@style/Base.Widget.AppCompat.ImageButton"
-            android:layout_width="50dp"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_date_range_24" />
+            app:icon="@drawable/ic_baseline_date_range_24" />
 
         <TextView
             android:id="@+id/tv_once_date"
@@ -42,11 +43,12 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageButton
+        <Button
             android:id="@+id/btn_once_time"
-            android:layout_width="50dp"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_access_time_24" />
+            app:icon="@drawable/ic_baseline_access_time_24" />
 
         <TextView
             android:id="@+id/tv_once_time"
@@ -61,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="@string/alarm_message"
+        android:importantForAutofill="no"
         android:inputType="text" />
 
     <Button
@@ -69,4 +72,41 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/set_one_time_alarm" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/repeating_alarm"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_repeating_time"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_baseline_access_time_24" />
+
+        <TextView
+            android:id="@+id/tv_repeating_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_time" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edt_repeating_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/alarm_message"
+        android:importantForAutofill="no"
+        android:inputType="text" />
 </LinearLayout>
