@@ -1,5 +1,7 @@
 package com.roynaldi19.dc3_08alarmmanager
 
+import android.Manifest
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -34,9 +36,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-//        if (Build.VERSION.SDK_INT >= 33) {
-//            requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-//        }
+        if (Build.VERSION.SDK_INT >= 33) {
+            requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
 
         binding?.btnOnceDate?.setOnClickListener(this)
         binding?.btnOnceTime?.setOnClickListener(this)
